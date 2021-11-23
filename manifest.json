@@ -1,0 +1,31 @@
+{
+	"name": "Media Blocker for Meetings",
+	"manifest_version": 3,
+	"version": "0.1",
+	"description": "This Extension helps to prevent toggling video and audio everytime while joining a meeting.",
+	"permissions": ["tabs", "storage", "activeTab"],
+	"host_permissions": ["*://meet.google.com/*"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
+		"default_popup": "popup.html",
+		"default_Icon": {
+			"16": "/images/Icon-16.png",
+			"48": "/images/Icon-48.png",
+			"128": "/images/Icon-128.png"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://meet.google.com/*"],
+			"js": ["utils/constants.js", "utils/helpers.js", "content.js"],
+			"run_at": "document_start"
+		}
+	],
+	"icons": {
+		"16": "/images/Icon-16.png",
+		"48": "/images/Icon-48.png",
+		"128": "/images/Icon-128.png"
+	}
+}

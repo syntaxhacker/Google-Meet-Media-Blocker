@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="popup.css" />
+	</head>
+	<body>
+		<div class="container theme-bright">
+			<div id="extInfo">
+				<img src="/images/Icon-128.png" alt="logo" srcset="" />
+				<h1>Media Blocker</h1>
+			</div>
+			<h2 id="warn">Please Open a Valid Google Meet</h2>
+			<section id="meetInfo">
+				<h2>Meet id --> <span id="meetId"></span></h2>
+			</section>
+			<section id="mediaControlWrapper">
+				<div id="videoControl">
+					<input id="videoControlBtn" type="checkbox" checked />
+					<label for="videoControlBtn">Video</label>
+				</div>
+				<div id="audioControl">
+					<input id="audioControlBtn" type="checkbox" checked />
+					<label for="audioControlBtn">Audio</label>
+				</div>
+			</section>
+			<script src="utils/constants.js"></script>
+			<script src="utils/helpers.js"></script>
+			<script src="popup.js"></script>
+		</div>
+	</body>
+</html>
