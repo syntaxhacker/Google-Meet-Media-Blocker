@@ -2,7 +2,7 @@
 	"name": "Media Blocker for Meetings",
 	"manifest_version": 3,
 	"version": "0.1",
-	"description": "This Extension helps to prevent toggling video and audio everytime while joining a meeting.",
+	"description": "This Extension helps to prevent toggling video and audio everytime while joining an Online meeting.",
 	"permissions": ["tabs", "storage", "activeTab"],
 	"host_permissions": ["*://meet.google.com/*"],
 	"background": {
