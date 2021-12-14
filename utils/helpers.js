@@ -50,6 +50,11 @@ const simulateKeyPress = (key) => {
 		default:
 			break;
 	}
+	// check platform and simulate keypress for macOS
+	if (navigator.userAgentData.platform.includes('macOS')	) {
+		keyObj.metaKey = true;
+		keyObj.ctrlKey = false;
+	}
 	const keyEvent = new KeyboardEvent("keydown", keyObj);
 	document.dispatchEvent(keyEvent);
 };
